@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 int main (){
     char titre[100][100],nom[20],supprimer[20];
     char auteur[100][100];
     float prix[100];
     int quantite[100];
-    int i,j,k;
+    int i,j,k,o=-1,choix=-1;
+    int totale=0;
+    while(choix!=0){
          for(i=0;i<=2;i++){
                  printf("le nom du livre \n");
                  scanf("%s",&titre[i]);
@@ -51,57 +54,14 @@ int main (){
                               quantite[k]=quantite[k+1];
                               printf("le livre est supprimer");
                     }
-                   }}
+
+                    for (i=0;i<=2;i++){
+			totale += quantite[i];
+		}
+		
+		printf("Le nombre total des livres en stock est: %d\n",totale);
+
+                   }}}
                          
         return 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
